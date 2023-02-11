@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { signInWithGoogle } from "./Firebase";
+
 
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
   
 import Home from './pages'
 import About from './pages/about';
- import JobPortal from './pages/jobportal';
+import JobPortal from './pages/jobportal';
+import HomeS from './pages/Home_Authentication/homeS';
 
 function App(){
 
@@ -17,6 +18,7 @@ function App(){
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path = '/homeS' element={<HomeS />} />
         <Route path='/about' element={<About />} />
         <Route path='/jobportal' element={<JobPortal/>} /> 
       </Routes>
