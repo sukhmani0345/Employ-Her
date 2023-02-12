@@ -1,18 +1,30 @@
 import React from 'react';
-import { Box, Grid, FilledInput, Select, MenuItem, Dialog, makeStyles, DialogContent, DialogTitle, DialogActions, Typography} from "@material-ui/core";
+import { Box, Grid, FilledInput, Select, MenuItem, Dialog, makeStyles, DialogContent, DialogTitle, DialogActions, Typography, Button, IconButton} from "@material-ui/core";
+
+// const useStyles = makeStyles(theme =>({
+
+// }))
+
+import { Close as CloseIcon } from "@material-ui/icons";
 
 export default (props) => {
 
     const skills = [
         "Javascript", "React", "Node", "Vue", "Firebase", "SQL",
     ];
+
     return (
         <Dialog open = {false} fullWidth>
-            <DialogTitle>Post Job</DialogTitle>
+            <DialogTitle>
+                <Box display="flex" justifyContent="space-between">
+                Post Job
+                <CloseIcon></CloseIcon>
+                </Box>
+            </DialogTitle>
             <DialogContent>
                 <Grid container spacing={2}>
                     <Grid item xs ={6}>
-                    <FilledInput placeholder='Job Ttitle *' disableUnderline fullWidth/>
+                    <FilledInput placeholder='Job Title *' disableUnderline fullWidth/>
                     </Grid>
                     <Grid fillwidth item xs ={6}>
                         <Select className = "wrapper" disableUnderline variant = "filled" defaultValue="Full time">
@@ -47,6 +59,16 @@ export default (props) => {
                     </Box>
                 </Box>
             </DialogContent>
+            <DialogActions>
+                <Box color="red" width="100%" display="flex" justifyContent ="space-between" alignItems="center">
+                    <Typography variant='caption'>
+                    *Required Fields
+                </Typography>
+                <Button variant = "contained" color = "primary" disableElevation>
+                    Post Job
+                </Button>
+                </Box>
+            </DialogActions>
         </Dialog>
     )
 

@@ -1,17 +1,14 @@
-// import React from 'react';
-// // import { Box, ThemeProvider } from "@material-ui/core";
-// import { Box, ThemeProvider } from "@mui/material";
-// import theme from "../theme/theme";
-
-// const JobPortal =  () =>{
-
-//     return <ThemeProvider theme={theme}></ThemeProvider>
-// }
-
-// export default JobPortal;
-
-import React from 'react';
-import { Box, Grid, Typography, Button, ThemeProvider, makeStyles, Select, MenuItem} from '@material-ui/core';
+import React from "react";
+import {
+  Box,
+  Grid,
+  Typography,
+  Button,
+  ThemeProvider,
+  makeStyles,
+  Select,
+  MenuItem,
+} from "@material-ui/core";
 import "./jobportal.css";
 // import axios from "axios";
 import { default as newJobModal } from "./newJobModal.js";
@@ -44,154 +41,203 @@ const skills = ["Javascript", "React.js", "Node.js"];
 //     }
 // });
 
-    
-function Jobportal(){ 
-    // const [aree, setAree] = useState([]);
-    // const [show, setShow] = useState(false);
-    // const newJobModal = () => {
-    //     setShow(true);
-    // }
-    // useEffect(() => {
-    //     axios.get("http://localhost:3000/jobportal/newJobModal").then((res) => {
-    //         setAree(res.data);
-    //         console.log(res.data);
-    //     });
-    // }, []);
-    
-
-    return (<Box py = {10} bgcolor = "secondary.main" color = "white">
-        <Grid container bgcolor="secondary.main" className='cont1' justifyContent = "center" >
-                <Box className = 'headerbox' display = "flex" justifyContent="space-between">
-                <Typography variant ="h4" className = 'typo'>
-                    Open Job listing
-                </Typography>
-                <Button className = 'button' variant = "contained" color = "primary" disableElevation >Post a Job</Button>
-                </Box>
+function Jobportal() {
+  return (
+    <Box py={10} bgcolor="secondary.main" color="white">
+      <Grid
+        container
+        bgcolor="secondary.main"
+        className="cont1"
+        justifyContent="center"
+      >
+        <Box
+          className="headerbox"
+          display="flex"
+          justifyContent="space-between"
+        >
+          <Typography variant="h4" className="typo">
+            Open Job listing
+          </Typography>
+          <Button
+            className="button"
+            variant="contained"
+            color="primary"
+            disableElevation
+          >
+            Post a Job
+          </Button>
+        </Box>
+      </Grid>
+      <Box justifyContent="center" display="flex">
+        <Select
+          className="wrapper"
+          disableUnderline
+          variant="filled"
+          defaultValue="Full time"
+        >
+          <MenuItem value="Full time">Full time</MenuItem>
+          <MenuItem value="Part time">Part time</MenuItem>
+          <MenuItem value="Contract">Contract</MenuItem>
+        </Select>
+        <Select
+          className="wrapper"
+          disableUnderline
+          variant="filled"
+          defaultValue="Remote"
+        >
+          <MenuItem value="Remote">Remote</MenuItem>
+          <MenuItem value="In Office">In Office</MenuItem>
+        </Select>
+        <Button color="primary" variant="contained" disableElevation>
+          Search
+        </Button>
+      </Box>
+      <Box className="wrapper2" bgcolor="white" color="black">
+        <Grid container className="wrapper1" alignItems="center">
+          <Grid item xs>
+            <Typography variant="subtitel">Frontend Dev</Typography>
+            <br></br>
+            <Typography variant="subtitle2" className="companyName">
+              Google
+            </Typography>
+          </Grid>
+          <Grid item container xs justifyContent="center" display="flex">
+            {skills.map((skill) => (
+              <Grid key={skill} className="skillchip" item>
+                {skill}
+              </Grid>
+            ))}
+          </Grid>
+          <Grid item container direction="column" alignItems="flex-end" xs>
+            <Grid item>
+              <Typography variant="caption">
+                2557 min ago | Full time | Remote
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Box mp={2}>
+                <Button color="primary" variant="contained" disableElevation>
+                  Check
+                </Button>
+                {/* <Button variant = "outlined" m = {5} p={5}>Check</Button> */}
+              </Box>
+            </Grid>
+          </Grid>
         </Grid>
-        <Box justifyContent="center" display="flex">
-                <Select className = "wrapper" disableUnderline variant = "filled" defaultValue="Full time">
-                    <MenuItem value =  "Full time">Full time</MenuItem>
-                    <MenuItem value =  "Part time">Part time</MenuItem>
-                    <MenuItem value =  "Contract">Contract</MenuItem>
-                </Select>
-                <Select className = "wrapper" disableUnderline variant = "filled" defaultValue="Remote">
-                    <MenuItem value =  "Remote">Remote</MenuItem>
-                    <MenuItem value =  "In Office">In Office</MenuItem>
-                </Select>
-                <Button  color = "primary" variant = "contained" disableElevation >
-                    Search 
+      </Box>
+      <Box className="wrapper2" bgcolor="white" color="black">
+        <Grid container className="wrapper1" alignItems="center">
+          <Grid item xs>
+            <Typography variant="subtitel">Frontend Dev</Typography>
+            <br></br>
+            <Typography variant="subtitle2" className="companyName">
+              Google
+            </Typography>
+          </Grid>
+          <Grid item container xs justifyContent="center" display="flex">
+            {skills.map((skill) => (
+              <Grid key={skill} className="skillchip" item>
+                {skill}
+              </Grid>
+            ))}
+          </Grid>
+          <Grid item container direction="column" alignItems="flex-end" xs>
+            <Grid item>
+              <Typography variant="caption">
+                2557 min ago | Full time | Remote
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Box mp={2}>
+                <Button color="primary" variant="contained" disableElevation>
+                  Check
                 </Button>
-            </Box>
-            <Box className="wrapper2" bgcolor="white" color = "black">
-                <Grid container className = "wrapper1" alignItems='center'>
-                    <Grid item xs>
-                        <Typography variant="subtitel">Frontend Dev</Typography><br></br>
-                        <Typography variant="subtitle2" className='companyName'>Google</Typography>
-                    </Grid>
-                    <Grid item container xs justifyContent="center" display="flex">
-                        {skills.map(skill => 
-                        <Grid key={skill} className = "skillchip" item>
-                            {skill}
-                        </Grid>)}
-                    </Grid>
-                    <Grid item container direction="column" alignItems='flex-end' xs>
-                    <Grid item>
-                        <Typography variant="caption">2557 min ago | Full time | Remote</Typography>
-                    </Grid>
-                    <Grid item>
-                        <Box mp = {2}>
-                        <Button  color = "primary" variant = "contained" disableElevation>
-                    Check
+                {/* <Button variant = "outlined" m = {5} p={5}>Check</Button> */}
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className="wrapper2" bgcolor="white" color="black">
+        <Grid container className="wrapper1" alignItems="center">
+          <Grid item xs>
+            <Typography variant="subtitel">Frontend Dev</Typography>
+            <br></br>
+            <Typography variant="subtitle2" className="companyName">
+              Google
+            </Typography>
+          </Grid>
+          <Grid item container xs justifyContent="center" display="flex">
+            {skills.map((skill) => (
+              <Grid key={skill} className="skillchip" item>
+                {skill}
+              </Grid>
+            ))}
+          </Grid>
+          <Grid item container direction="column" alignItems="flex-end" xs>
+            <Grid item>
+              <Typography variant="caption">
+                2557 min ago | Full time | Remote
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Box mp={2}>
+                <Button color="primary" variant="contained" disableElevation>
+                  Check
                 </Button>
-                        {/* <Button variant = "outlined" m = {5} p={5}>Check</Button> */}
-                        </Box>
-                    </Grid>
-                    </Grid>
-                </Grid>
-            </Box>
-            <Box className="wrapper2" bgcolor="white" color = "black">
-                <Grid container className = "wrapper1" alignItems='center'>
-                    <Grid item xs>
-                        <Typography variant="subtitel">Frontend Dev</Typography><br></br>
-                        <Typography variant="subtitle2" className='companyName'>Google</Typography>
-                    </Grid>
-                    <Grid item container xs justifyContent="center" display="flex">
-                        {skills.map(skill => 
-                        <Grid key={skill} className = "skillchip" item>
-                            {skill}
-                        </Grid>)}
-                    </Grid>
-                    <Grid item container direction="column" alignItems='flex-end' xs>
-                    <Grid item>
-                        <Typography variant="caption">2557 min ago | Full time | Remote</Typography>
-                    </Grid>
-                    <Grid item>
-                        <Box mp = {2}>
-                        <Button  color = "primary" variant = "contained" disableElevation>
-                    Check
+                {/* <Button variant = "outlined" m = {5} p={5}>Check</Button> */}
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box className="wrapper2" bgcolor="white" color="black">
+        <Grid container className="wrapper1" alignItems="center">
+          <Grid item xs>
+            <Typography variant="subtitel">Frontend Dev</Typography>
+            <br></br>
+            <Typography variant="subtitle2" className="companyName">
+              Google
+            </Typography>
+          </Grid>
+          <Grid item container xs justifyContent="center" display="flex">
+            {skills.map((skill) => (
+              <Grid key={skill} className="skillchip" item>
+                {skill}
+              </Grid>
+            ))}
+          </Grid>
+          <Grid item container direction="column" alignItems="flex-end" xs>
+            <Grid item>
+              <Typography variant="caption">
+                2557 min ago | Full time | Remote
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Box mp={2}>
+                <Button color="primary" variant="contained" disableElevation>
+                  Check
                 </Button>
-                        {/* <Button variant = "outlined" m = {5} p={5}>Check</Button> */}
-                        </Box>
-                    </Grid>
-                    </Grid>
-                </Grid>
-            </Box>
-            <Box className="wrapper2" bgcolor="white" color = "black">
-                <Grid container className = "wrapper1" alignItems='center'>
-                    <Grid item xs>
-                        <Typography variant="subtitel">Frontend Dev</Typography><br></br>
-                        <Typography variant="subtitle2" className='companyName'>Google</Typography>
-                    </Grid>
-                    <Grid item container xs justifyContent="center" display="flex">
-                        {skills.map(skill => 
-                        <Grid key={skill} className = "skillchip" item>
-                            {skill}
-                        </Grid>)}
-                    </Grid>
-                    <Grid item container direction="column" alignItems='flex-end' xs>
-                    <Grid item>
-                        <Typography variant="caption">2557 min ago | Full time | Remote</Typography>
-                    </Grid>
-                    <Grid item>
-                        <Box mp = {2}>
-                        <Button  color = "primary" variant = "contained" disableElevation>
-                    Check
-                </Button>
-                        {/* <Button variant = "outlined" m = {5} p={5}>Check</Button> */}
-                        </Box>
-                    </Grid>
-                    </Grid>
-                </Grid>
-            </Box>
-            <Box className="wrapper2" bgcolor="white" color = "black">
-                <Grid container className = "wrapper1" alignItems='center'>
-                    <Grid item xs>
-                        <Typography variant="subtitel">Frontend Dev</Typography><br></br>
-                        <Typography variant="subtitle2" className='companyName'>Google</Typography>
-                    </Grid>
-                    <Grid item container xs justifyContent="center" display="flex">
-                        {skills.map(skill => 
-                        <Grid key={skill} className = "skillchip" item>
-                            {skill}
-                        </Grid>)}
-                    </Grid>
-                    <Grid item container direction="column" alignItems='flex-end' xs>
-                    <Grid item>
-                        <Typography variant="caption">2557 min ago | Full time | Remote</Typography>
-                    </Grid>
-                    <Grid item>
-                        <Box mp = {2}>
-                        <Button  color = "primary" variant = "contained" disableElevation>
-                    Check
-                </Button>
-                        {/* <Button variant = "outlined" m = {5} p={5}>Check</Button> */}
-                        </Box>
-                    </Grid>
-                    </Grid>
-                </Grid>
-            </Box>
-    </Box>);
+                {/* <Button variant = "outlined" m = {5} p={5}>Check</Button> */}
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Box>
+    </Box>
+  );
+}
 
-                        };
+export default Jobportal;
 
-                        export default Jobportal;
+// import React from 'react';
+// // import { Box, ThemeProvider } from "@material-ui/core";
+// import { Box, ThemeProvider } from "@mui/material";
+// import theme from "../theme/theme";
+
+// const JobPortal =  () =>{
+
+//     return <ThemeProvider theme={theme}></ThemeProvider>
+// }
+
+// export default JobPortal;
