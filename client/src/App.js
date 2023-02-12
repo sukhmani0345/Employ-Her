@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-
+import {Provider}  from 'react-redux'
 
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
@@ -10,11 +10,15 @@ import Home from './pages'
 import About from './pages/about';
 import JobPortal from './pages/jobportal';
 import HomeS from './pages/Home_Authentication/homeS';
+import { Grid } from '@material-ui/core';
+import NewJobModal from './pages/newJobModal';
 // import SearchBar from './components/SearchBar';
 
 function App(){
 
   return (
+    <Grid>
+      <NewJobModal></NewJobModal>
     <Router>
       <Navbar />
       <Routes>
@@ -24,6 +28,9 @@ function App(){
         <Route path='/jobportal' element={<JobPortal/>} /> 
       </Routes>
     </Router>
+    </Grid>
+
+    
     // <div className="App">
     //   <button class="login-with-google-btn" onClick={signInWithGoogle}>
     //     Sign in with Google
