@@ -6,6 +6,7 @@ const Navbar = () => {
     return (
         <>
             <Nav className = "nav">
+            {/* <img src="img_girl.jpg" width="100px" height="100"></img>. */}
                 <NavMenu><NavLink to="/homeS" activeStyle>
                         Home
                     </NavLink>
@@ -17,7 +18,7 @@ const Navbar = () => {
                     </NavLink>
                 </NavMenu>
             </Nav>
-            <hr width="-300000000000px" 
+            <hr width="-300px" 
                     color="white" 
                     size="5" 
                     align="left"
