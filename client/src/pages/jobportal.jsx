@@ -4,28 +4,21 @@ import {
   Grid,
   Typography,
   Button,
-  ThemeProvider,
-  makeStyles,
   Select,
-  MenuItem,
+  MenuItem
 } from "@material-ui/core";
 import "./jobportal.css";
+import "./home.css"
 // import axios from "axios";
 
 // import { useState, useEffect } from "react";
 
 const skills = ["Javascript", "React.js", "Node.js"];
 
-// const useStyles = makeStyles((theme)=> ({
-//     wrapper: {
-//         border:'1px solid #e8e8e8',
 
-//     },
-//     companyName: {
-//         font-size: "13.5px",
-//         background-
-//     }
-// }));
+
+function Jobportal() {
+
 // const useStyles = makeStyles({
 
 //     wrapper: {
@@ -41,9 +34,9 @@ const skills = ["Javascript", "React.js", "Node.js"];
 //     }
 // });
 
-function Jobportal() {
   return (
-    <Box  py={10} bgcolor="secondary.main" color="white">
+    <header>
+    <Box  py={10} color="white">
       <Grid
         container
         bgcolor="secondary.main"
@@ -54,13 +47,14 @@ function Jobportal() {
           display="flex"
           justify = "space-between"
         >
-          <Typography variant="h4" className="typo">
+          <Typography variant="h4" className="typo" marginRight="10000000">
             Open Job listing
           </Typography>
           <Button
             className="post"
             variant="contained"
             color="primary"
+            marginLeft="100000"
             disableElevation
           >
             Post a Job
@@ -224,6 +218,7 @@ function Jobportal() {
         </Grid>
       </Box>
     </Box>
+    </header>
   );
 }
 

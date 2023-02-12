@@ -17,10 +17,12 @@ const Navbar = () => {
                     </NavLink>
                 </NavMenu>
             </Nav>
-            <hr width="300px" 
+            <hr width="-300000000000px" 
                     color="white" 
                     size="5" 
-                    align="left"></hr>
+                    align="left"
+                    border-bottom="5px solid white"
+                    ></hr>
         </>
     );
 };
