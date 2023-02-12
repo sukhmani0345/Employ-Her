@@ -11,7 +11,7 @@ Employ-Her is an online job portal for rural women that connects them with emplo
 
 ![WhatsApp Image 2023-02-12 at 18 49 59](https://user-images.githubusercontent.com/85976870/218314284-1b3497a4-e50a-4216-aab5-3e7d528ee123.jpeg)
 
-#Tech Stack 
+#  Tech Stack 
  - HMTL
  - CSS
  - javascript
@@ -19,7 +19,7 @@ Employ-Her is an online job portal for rural women that connects them with emplo
  - Firebase
  - Netlify
 
-#Features
+#  Features
  - Find the job
  - Apply onspot
  - Different organization can post about job opportunities.
