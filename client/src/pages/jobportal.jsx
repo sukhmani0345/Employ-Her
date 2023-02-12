@@ -13,6 +13,9 @@
 import React from 'react';
 import { Box, Grid, Typography, Button, ThemeProvider, makeStyles, Select, MenuItem} from '@material-ui/core';
 import "./jobportal.css";
+// import axios from "axios";
+import { default as newJobModal } from "./newJobModal.js";
+// import { useState, useEffect } from "react";
 
 const skills = ["Javascript", "React.js", "Node.js"];
 
@@ -41,15 +44,28 @@ const skills = ["Javascript", "React.js", "Node.js"];
 //     }
 // });
 
-export default (props) =>( 
+    
+function Jobportal(){ 
+    // const [aree, setAree] = useState([]);
+    // const [show, setShow] = useState(false);
+    // const newJobModal = () => {
+    //     setShow(true);
+    // }
+    // useEffect(() => {
+    //     axios.get("http://localhost:3000/jobportal/newJobModal").then((res) => {
+    //         setAree(res.data);
+    //         console.log(res.data);
+    //     });
+    // }, []);
+    
 
-    <Box py = {10} bgcolor = "secondary.main" color = "white">
-        <Grid container bgcolor="secondary.main" className='cont1' justify = "center" >
+    return (<Box py = {10} bgcolor = "secondary.main" color = "white">
+        <Grid container bgcolor="secondary.main" className='cont1' justifyContent = "center" >
                 <Box className = 'headerbox' display = "flex" justifyContent="space-between">
                 <Typography variant ="h4" className = 'typo'>
                     Open Job listing
                 </Typography>
-                <Button className = 'button' variant = "contained" color = "primary" disableElevation>Post a Job</Button>
+                <Button className = 'button' variant = "contained" color = "primary" disableElevation >Post a Job</Button>
                 </Box>
         </Grid>
         <Box justifyContent="center" display="flex">
@@ -62,7 +78,7 @@ export default (props) =>(
                     <MenuItem value =  "Remote">Remote</MenuItem>
                     <MenuItem value =  "In Office">In Office</MenuItem>
                 </Select>
-                <Button  color = "primary" variant = "contained" disableElevation>
+                <Button  color = "primary" variant = "contained" disableElevation >
                     Search 
                 </Button>
             </Box>
@@ -174,6 +190,8 @@ export default (props) =>(
                     </Grid>
                 </Grid>
             </Box>
-    </Box>
+    </Box>);
 
-)
+                        };
+
+                        export default Jobportal;

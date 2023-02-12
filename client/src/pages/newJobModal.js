@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:client/src/pages/newJobModal.jsx
+>>>>>>> e20df73ed7336fbdbb5d66c580eb334e8580c6ce
 import { Box, Grid, FilledInput, Select, MenuItem, Dialog, makeStyles, DialogContent, DialogTitle, DialogActions, Typography} from "@material-ui/core";
 
 export default (props) => {
@@ -6,6 +10,17 @@ export default (props) => {
     const skills = [
         "Javascript", "React", "Node", "Vue", "Firebase", "SQL",
     ];
+<<<<<<< HEAD
+=======
+========
+
+import { Box, Grid, FilledInput, Select, MenuItem, Dialog, DialogContent, DialogTitle, DialogActions} from "@material-ui/core";
+
+export default (props) => {
+
+    
+>>>>>>>> e20df73ed7336fbdbb5d66c580eb334e8580c6ce:client/src/pages/newJobModal.js
+>>>>>>> e20df73ed7336fbdbb5d66c580eb334e8580c6ce
 
     return (
         <Dialog open = {true} fullWidth>
