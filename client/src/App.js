@@ -11,6 +11,7 @@ import JobPortal from './pages/jobportal';
 import HomeS from './pages/Home_Authentication/homeS';
 import { Grid } from '@material-ui/core';
 import NewJobModal from './pages/newJobModal';
+
 // import SearchBar from './components/SearchBar';
 
 function App(){
