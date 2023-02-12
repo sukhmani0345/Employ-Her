@@ -4,9 +4,8 @@ import {Nav, NavLink, NavMenu } from "./NavbarElements";
 const Navbar = () => {
 
     return (
-
         <>
-            <Nav>
+            <Nav className = "nav">
                 <NavMenu><NavLink to="/homeS" activeStyle>
                         Home
                     </NavLink>

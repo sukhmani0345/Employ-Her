@@ -10,6 +10,7 @@ import Home from './pages'
 import About from './pages/about';
 import JobPortal from './pages/jobportal';
 import HomeS from './pages/Home_Authentication/homeS';
+// import SearchBar from './components/SearchBar';
 
 function App(){
 
