@@ -24,6 +24,7 @@ Employ-Her is an online job portal for rural women that connects them with emplo
  - Apply onspot
  - Different organization can post about job opportunities.
  - Get to know about Stem.
+ - video demo link - https://www.youtube.com/watch?v=NyCb4EdHwNs
 
 #  Future Scopes
  1. Info about STEM Field for High School Students
