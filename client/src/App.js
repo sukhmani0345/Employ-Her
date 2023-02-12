@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
   
-import Home from './pages'
+// import Home from './pages'
 import About from './pages/about';
 import JobPortal from './pages/jobportal';
 import HomeS from './pages/Home_Authentication/homeS';
@@ -23,7 +23,7 @@ function App(){
       <Navbar />
       <Routes>
 
-        <Route path='/' element={<Home />} />
+        {/* <Route path='/' element={<Home />} /> */}
         <Route path = '/homeS' element={<HomeS />} />
         <Route path='/about' element={<About />} />
         <Route path='/jobportal' element={<JobPortal/>} /> 
