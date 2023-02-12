@@ -17,6 +17,10 @@ const Navbar = () => {
                     </NavLink>
                 </NavMenu>
             </Nav>
+            <hr width="300px" 
+                    color="white" 
+                    size="5" 
+                    align="left"></hr>
         </>
     );
 };

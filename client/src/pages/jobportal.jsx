@@ -60,12 +60,12 @@ function Jobportal(){
     
 
     return (<Box py = {10} bgcolor = "secondary.main" color = "white">
-        <Grid container bgcolor="secondary.main" className='cont1' justifyContent = "center" >
-                <Box className = 'headerbox' display = "flex" justifyContent="space-between">
+        <Grid container bgcolor="secondary.main" className='cont1' >
+                <Box className = 'headerbox' display = "flex" justifyContent="space-between" >
                 <Typography variant ="h4" className = 'typo'>
                     Open Job listing
                 </Typography>
-                <Button className = 'button' variant = "contained" color = "primary" disableElevation >Post a Job</Button>
+                <Button m =  {1000} className = 'post' variant = "contained" color = "primary" disableElevation >Post a Job</Button>
                 </Box>
         </Grid>
         <Box justifyContent="center" display="flex">
