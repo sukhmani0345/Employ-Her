@@ -4,6 +4,7 @@ import { signInWithGoogle } from "./Firebase.js";
 import "./homeS.css"
 
 
+
 export default (props) =>( 
 <header>
 <Box py={10} color = "White">
@@ -12,15 +13,17 @@ export default (props) =>(
         <Box display = "flex" justifyContent="center" marginBottom={10}>
         <Button variant = "contained" color = "primary" disableElevation onClick={signInWithGoogle} >login-with-Google</Button>
         </Box>
-        <video className = 'intro'
+        {/* <video className = 'intro'
           style={{ maxWidth: "100%", width: "800px", margin: "10 auto",borderRadius:"5px"}}
           playsInline
           loop
           muted
           controls
           alt="All the devices"
-          src="https://stream.mux.com/6fiGM5ChLz8T66ZZiuzk1KZuIKX8zJz00/medium.mp4"
-        />
+          src="video"
+          type="video/mp4"
+        /> */}
+        {/* <img src='client/src/pages/EmployHer.jpeg' ></img> */}
     </Grid>
 </Grid>
 </Box>
