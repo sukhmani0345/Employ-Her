@@ -8,7 +8,7 @@ import {
   MenuItem
 } from "@material-ui/core";
 import "./jobportal.css";
-import "./home.css"
+// import "./home.css"
 // import axios from "axios";
 
 // import { useState, useEffect } from "react";
@@ -35,8 +35,8 @@ function Jobportal() {
 // });
 
   return (
-    <header>
-    <Box  py={10} color="white">
+    // <header>
+    <Box  py={10} bgcolor="secondary.main" color="white">
       <Grid
         container
         bgcolor="secondary.main"
@@ -47,15 +47,19 @@ function Jobportal() {
           display="flex"
           justify = "space-between"
         >
-          <Typography variant="h4" className="typo" marginRight="10000000">
+          <Typography variant="h4" className="typo" >
             Open Job listing
           </Typography>
+          </Box>
+<Box  className="headerbox"
+          display="flex"
+          justify = "space-between">
           <Button
             className="post"
             variant="contained"
             color="primary"
-            marginLeft="100000"
             disableElevation
+            style={{ marginLeft: "1050px" }}
           >
             Post a Job
           </Button>
@@ -67,6 +71,8 @@ function Jobportal() {
           disableUnderline
           variant="filled"
           defaultValue="Full time"
+          bgcolor="white"
+          color="black"
         >
           <MenuItem value="Full time">Full time</MenuItem>
           <MenuItem value="Part time">Part time</MenuItem>
@@ -94,7 +100,7 @@ function Jobportal() {
               Google
             </Typography>
           </Grid>
-          <Grid item container xs justifyContent="center" display="flex">
+          <Grid item container xs justifyContent="center" display="flex" >
             {skills.map((skill) => (
               <Grid key={skill} className="skillchip" item>
                 {skill}
@@ -218,7 +224,7 @@ function Jobportal() {
         </Grid>
       </Box>
     </Box>
-    </header>
+    // </header>
   );
 }
 
