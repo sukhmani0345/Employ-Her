@@ -11,6 +11,15 @@ export default (props) =>(
         <Box display = "flex" justifyContent="space-between">
         <Button variant = "contained" color = "primary" disableElevation onClick={signInWithGoogle}>login-with-google-btn</Button>
         </Box>
+        <video className = 'videos'
+          style={{ maxWidth: "100%", width: "800px", margin: "0 auto" }}
+          playsInline
+          loop
+          muted
+          controls
+          alt="All the devices"
+          src="https://stream.mux.com/6fiGM5ChLz8T66ZZiuzk1KZuIKX8zJz00/medium.mp4"
+        />
     </Grid>
 </Grid>
 </Box>
